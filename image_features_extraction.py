@@ -60,14 +60,16 @@ index_ = []
 def concat_dataset(origin, image_features):
     origin_data = pd.read_csv(origin)
     origin_data = pd.DataFrame(origin_data)
-    origin_data = origin_data['image_url']
+    origin_data = origin_data['name']
 
     for idx, value in enumerate(error):
         index_.append(int(value))
 
-    origin_data.drop(index=index_)
+    origin_data=origin_data.drop(index=[index_[:]], aixs=0, inplace=True)
+    origin_data.reset_index(inplace=True)
+    origin_data.drop(['index'], axis=1, inplace=True)
 
-    image_data = pd.concat([origin_data, image_features], axis=1)
+    image_data = pd.concat([origin_data, pd.DataFrame(image_features)], axis=1)
     image_data.to_csv('image.csv', header=True)
 
     return image_data
