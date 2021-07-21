@@ -70,7 +70,7 @@ def concat_dataset(origin, image_features):
     origin_data.drop(['index'], axis=1, inplace=True)
 
     image_data = pd.concat([origin_data, pd.DataFrame(image_features)], axis=1)
-    image_data.to_csv('image.csv', header=True)
+    image_data.to_csv('image_feature.csv', header=True)
 
     return image_data
 
