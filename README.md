@@ -27,6 +27,12 @@ data.csv은 36468개의 item csv이며 (image_url, name, review_url)으로 이�
     - 중분류를 Label로 한 Classification (PCA 적용/ 미적용)
     - 대분류를 기준으로 부분집합 생성 후 중분류를 label로 한 Classification (PCA 적용/ 미적용)
     - cosine similarity를 이용한 Content-Based Filtering
+
+  |\|with PCA|w.o PCA|
+  |---|---|---|
+  |Large||0|||0||
+  |Medium||0|||0||
+  |Subset||0||||0|
   
 ## 3. Results
 
