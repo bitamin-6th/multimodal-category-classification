@@ -22,7 +22,7 @@ data.csv은 36468개의 item csv이며 (image_url, name, review_url)으로 이�
     - 이미지 다운로드 후 ViT-B/32 를 통해 이미지 Encode -> feature extraction
     - Classification을 위한 label 생성 -> 대/중/소 분류로 다차원 label 생성
 
-  - cluster.ipynb
+  - classification.ipynb
     - 대분류를 Label로 한 Classification (PCA 적용/ 미적용)
     - 중분류를 Label로 한 Classification (PCA 적용/ 미적용)
     - 대분류를 기준으로 부분집합 생성 후 중분류를 label로 한 Classification (PCA 적용/ 미적용)
