@@ -29,8 +29,8 @@ data.csv은 36468개의 item csv이며 (image_url, name, review_url)으로 이�
     - cosine similarity를 이용한 Content-Based Filtering
 
   
-## 3. Results
-#|\|w.o PCA|with PCA|
+## 3. Results(image classification accuracy)
+#|\| w.o PCA|with PCA|
 |------|-----|-----|
 |Large|66%|76%|
 |Medium|60%|67%|
