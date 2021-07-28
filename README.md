@@ -36,3 +36,6 @@ data.csv은 36468개의 item csv이며 (image_url, name, review_url)으로 이�
 |Medium|60%|67%|
 |Subset|76%|83%|
 
+![image](https://user-images.githubusercontent.com/77579408/127295618-018811b9-bf5a-4753-b1dc-766b5f626113.png)
+
+
