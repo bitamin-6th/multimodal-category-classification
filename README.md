@@ -30,19 +30,13 @@ data.csv은 36468개의 item csv이며 (image_url, name, review_url)으로 이�
 
   
 ## 3. Results(image classification accuracy)
-#|\| w.o PCA|PCA -> Split|
-|------|-----|-----|
-|Large|66%|76%|
-|Medium|60%|67%|
-|Subset|76%|83%|
-|Full|N%|N%|
+#|\| w.o PCA|PCA -> Split|Split -> PCA|
+|------|-----|-----|-----|
+|Large|66%|76%|69%|
+|Medium|60%|67%|63%|
+|Subset|76%|83%|84%
+|Full|N%|N%|N%|
 
-#|\| Split -> PCA|PCA -> Split|
-|------|-----|-----|
-|Large|69%|76%|
-|Medium|63%|67%|
-|Subset|84%|83%|
-|Full|N%|N%|
 
 ![image](https://user-images.githubusercontent.com/77579408/127295618-018811b9-bf5a-4753-b1dc-766b5f626113.png)
 
