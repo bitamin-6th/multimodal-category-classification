@@ -63,7 +63,8 @@ data.csv은 36468개의 item csv이며 (image_url, name, review_url)으로 이�
 - Text vs Image vs Text+Image+Price
 ![figure2](https://github.com/bitamin-6th/nms-content-filter/blob/main/result.png)
 - image classification accuracy
-|\| w.o PCA|PCA -> Split|Split -> PCA|
+
+#|\| w.o PCA|PCA -> Split|Split -> PCA|
 |------|-----|-----|-----|
 |Large|66%|76%|69%|
 |Medium|60%|67%|63%|
