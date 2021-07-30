@@ -1,5 +1,7 @@
 # nms-content-filter
-Naver Multimodal Shopping Item Content Based Filtering
+Naver Multimodal Sports Shopping Item Category Classification
+![newplot](https://github.com/bitamin-6th/nms-content-filter/model.png)
+
 
 ## 1. Dataset Curation
 1. crawl.py
@@ -14,9 +16,33 @@ data.csv은 36468개의 item csv이며 (image_url, name, review_url)으로 이�
 - name : 상품명
 - review_url : 페이지 url이며 본 url로 상품 태그나 리뷰를 재수집해야함. 
 
-## 2. Method
-이미지와 텍스트로부터 multi-modal feature를 추출함.
+3. preprocessed_datasets.csv
+(image_feature, text_feature, price, label)로 이루어져 있음. 
+- image_feature : CLIP으로 이미지 특징벡터 추출하여 열에 저장
+- text_feature : 상품명을 토크나이징하여 열에 저장
+- price : 가격, standardscaler로 전처리 후 입력에 넣음. 
+- label : 대분류>중분류>소분류로 label을 합침, ex) "농구공>농구화>etc"
 
+4. main.py
+- epochs : 200
+- batch_size : 256
+- split : 0.2
+- seed : 42
+- lr : 1e-4
+
+
+
+## 2. Method
+이미지와 텍스트로부터 multi-modal feature를 추출
+- Text + Image + Price
+  - 텍스트 : CNN-LSTM
+  - 이미지 : CLIP
+  - Price : 입력
+  - 을 concat 하여 MLP로 카테고리를 분류
+- Text only
+  - 상품명으로부터 Okt 명사 추출
+  - Word2Vec으로 토크나이징
+  - CNN-LSTM으로 카테고리 분류 
 - Image Only
   - image_features_extraction.py 
     - 이미지 다운로드 후 ViT-B/32 를 통해 이미지 Encode -> feature extraction
@@ -29,7 +55,11 @@ data.csv은 36468개의 item csv이며 (image_url, name, review_url)으로 이�
     - cosine similarity를 이용한 Content-Based Filtering
 
   
-## 3. Results(image classification accuracy)
+## 3. Results
+  
+- Text vs Image vs Text+Image+Price
+![newplot](https://github.com/bitamin-6th/nms-content-filter/result.png)
+- image classification accuracy
 #|\| w.o PCA|PCA -> Split|Split -> PCA|
 |------|-----|-----|-----|
 |Large|66%|76%|69%|
