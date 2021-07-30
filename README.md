@@ -1,6 +1,6 @@
 # nms-content-filter
 Naver Multimodal Sports Shopping Item Category Classification
-![figure1](https://github.com/bitamin-6th/nms-content-filter/model.png)
+![figure1](https://github.com/bitamin-6th/nms-content-filter/blob/main/model.png)
 
 
 ## 1. Dataset Curation
@@ -58,7 +58,7 @@ data.csv은 36468개의 item csv이며 (image_url, name, review_url)으로 이�
 ## 3. Results
   
 - Text vs Image vs Text+Image+Price
-![figure2](https://github.com/bitamin-6th/nms-content-filter/result.png)
+![figure2](https://github.com/bitamin-6th/nms-content-filter/blob/main/result.png)
 - image classification accuracy
 |\| w.o PCA|PCA -> Split|Split -> PCA|
 |------|-----|-----|-----|
