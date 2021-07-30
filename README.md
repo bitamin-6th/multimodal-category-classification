@@ -1,7 +1,10 @@
-# nms-content-filter
-Naver Multimodal Sports Shopping Item Category Classification
+# Naver Multimodal Sports Shopping Item Category Classification
+네이버 멀티모달 쇼핑 아이템 카테고리 분류 
+
 ![figure1](https://github.com/bitamin-6th/nms-content-filter/blob/main/model.png)
 
+- tensorflow로 구현하였습니다. 
+- 이미지, 텍스트, 가격으로 약 500개 클래스를 평균 76%의 성능으로 분류합니다.
 
 ## 1. Dataset Curation
 1. crawl.py
